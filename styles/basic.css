@@ -144,6 +144,11 @@ nav a:hover{
       padding:2em;
   }
 
+main{
+    position:relative;
+    top:60px;
+  }
+
   /* the styles for the footer*/
 
 footer {
