@@ -1,0 +1,414 @@
+/*
+Name : Jenny Shin
+Date : 03/14/2022
+CS 125H - Lab5
+*/
+
+/* the reset selector*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* the styles for the elements */
+
+html {
+  background-color: #f5f5f5;
+}
+
+body {
+  font-family: "Montserrat", sans-serif, Arial, sans-serif;
+  width:100%;
+  color: #30475e;
+
+  
+}
+
+p {
+  color: #30475e;
+  font-size: 120%;
+}
+
+/* the styles for the header */
+
+.header{
+  display:flex;
+  justify-content: center;
+}
+.logo {
+  
+  width: 75px;
+  height: auto;
+  margin: 0.5em 1em 1em 2em;
+}
+
+.title{
+  margin-top:1.7em;
+}
+
+
+/* the styles for the navbar*/
+
+.nav-toggle{
+  display:none;
+}
+
+.nav-toggle-label{
+  position:absolute;
+  top:0;
+  left:0;
+  margin-left:1em;
+  
+  height:20%;
+  display:flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+  display:block;
+  background-color: #30475e;
+  height:2px;
+  width:2em;
+  border-radius:4px;
+  position:relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before{
+  bottom:7px;
+}
+
+.nav-toggle-label span::after{
+  top:7px;
+}
+
+nav{
+  background-color:#f5f5f5;
+  text-align: center;
+  position:fixed;
+  z-index:999;
+  width:100%;
+  position:absolute;
+  text-align:left;
+  top:25%;
+  display:none;
+  
+}
+
+
+
+nav ul{
+  padding:0;
+  margin:0;
+  list-style-type: none;
+}
+
+nav li{
+  margin-bottom:1em;
+  margin-left:1em;
+}
+
+nav a{
+  color:#30475e;
+  text-decoration: none;
+  font-size:1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+nav a:hover{
+  color:#f05454;
+}
+
+.nav-toggle:checked ~ nav{
+  display:block;
+  
+}
+
+/* styles for the main heading */
+
+
+main .signup-img{
+  width:200px;
+  padding-left:2em;
+}
+
+main .main-title{
+  font-size: 2em;
+  text-align: center;
+  padding-top:2em;
+  padding-bottom:2em;
+
+}
+
+
+/* styles for the main section */
+
+section{
+  text-align: center;
+}
+main .letter_img{
+  width:60%;
+  min-width:200px;
+  
+  
+}
+
+main .korean_girl{
+  width:80%;
+  min-width:200px;
+}
+
+main .why{
+  padding-left:2em;
+  padding-right:2em;
+}
+
+main .alphabet{
+  padding-left:2em;
+  padding-right:2em;
+}
+
+/* styles for the aside */
+
+aside h2{
+  font-size: 2em;
+  text-align: center;
+  padding-top:2em;
+  padding-bottom:1em;
+}
+
+aside .buttons{
+display:flex;
+flex-direction: row;
+justify-content: space-around;
+ 
+}
+aside .basic_img{
+  width:10em;
+}
+
+aside .fun_video_img{
+  width:10em;
+}
+
+aside .worksheets_img{
+  width:10em;
+}
+
+/* styles for the table */
+table{
+  white-space:nowrap;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+figure, caption{
+  margin:0;
+  padding:0;
+}
+
+aside figcaption{
+  text-align: center;
+  font-size:2em;
+  padding-top:2em;
+  padding-bottom:2em;
+}
+
+table th{
+  padding-left:1em;
+}
+
+table td{
+  padding-left:2em;
+}
+
+.quotation {
+  font-size: 100%;
+  padding: 5em;
+  text-align: center;
+}
+
+/* the styles for the footer*/
+
+footer {
+  background-color: hsl(199, 26%, 25%);
+  width: 100%;
+  height: 300px;
+}
+
+.footer_logo {
+  
+  width: 3em;
+  height: auto;
+  margin:1em 0 0 2em;
+  
+}
+footer .footer-title{
+  display:flex;
+  justify-content: flex-star;
+  align-items: baseline;
+}
+.footer_heading{
+  color: rgba(255, 255, 255, 0.774);
+  font-size: 17px;
+  align-self:flex-end;
+}
+
+
+.contact_us{
+  color:white;
+  font-size:1em;
+  padding-top: 1em;
+  padding-bottom:1em;
+}
+
+.social_media_img{
+  width:2em;
+  padding-right:0.25em;
+}
+
+.contact_social{
+  display:flex;
+  justify-content: flex-end;
+
+  padding-right:2em;
+  margin-top:8em;
+}
+.copyright {
+  font-size: 100%;
+  color: white;
+  border-top:1px solid rgba(216, 215, 215, 0.719);
+  margin: 1em 1em 1em 1em;
+  padding-top:1em;
+}
+
+@media screen and (min-width: 800px){
+  .nav-toggle-label{
+    display:none;
+  }
+
+  nav{
+    display:block;
+  }
+  nav ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+  }
+
+  .signup-img{
+    position:relative;
+    top:100px;
+  }
+
+  main .main-title{
+    position:relative;
+    top:120px;
+    text-align: left;
+    padding-left:2.5em;
+    font-size: 35px;
+  }
+
+  section{
+    position:relative;
+    top:120px;
+  }
+
+  section
+  main .letter_img{
+    width:40%;
+    max-width:200px;
+    
+  }
+  
+  main .korean_girl{
+    width:1100px;
+  }
+  
+  main .section1{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top : 5em;
+  }
+
+  main .section2{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top : 5em;
+  }
+
+  main .letter_img{
+    flex-basis:50%;
+    max-width: 350px;
+  }
+
+  main .why{
+    flex-basis: 50%;
+    
+  }
+
+  aside h2{
+    position: relative;
+    top:120px;
+    font-size: 2em;
+    text-align: center;
+    padding-top:2em;
+    padding-bottom:1em;
+  }
+
+  aside .buttons{
+    position:relative;
+    top:130px;
+  }
+
+
+
+  aside figcaption{
+    position: relative;
+    top:120px;
+  }
+
+  aside table{
+   
+    position: relative;
+    top:120px
+    
+  }
+
+  aside th,td,tr{
+    text-align: center;
+    padding: 1.5em 1.5em;
+  }
+
+  .quotation {
+
+  position:relative;
+  top:100px;
+    font-size: 100%;
+    padding: 5em;
+    text-align: center;
+  }
+
+  .quotation{
+    display:none;
+  }
+  
+  footer{
+    position:relative;
+    top:120px;
+  }
+}
+
