@@ -258,4 +258,8 @@ footer .footer-title{
     justify-content: space-evenly;
     
   }
+main{
+  position:relative;
+  top:100px;
+}
 }
